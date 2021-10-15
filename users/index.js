@@ -1,4 +1,9 @@
 import express from "express";
+import dotenv from "dotenv";
+import { resolve, dirname } from "path";
+import { fileURLToPath } from "url"
+
+dotenv.config({ path: resolve(dirname(fileURLToPath(import.meta.url)), ".env") });
 
 const app = express();
 
@@ -14,6 +19,8 @@ const users = [
 ]
 
 app.get("/", (req, res) => res.status(200).json({users}))
+
+app.get("/password", (req, res) => res.status(200).json({password: process.env.PASSWORD}))
 
 app.put("/", express.json(), (req, res) => {
   users.push(req.body);
