@@ -1,4 +1,4 @@
-import express from "express";
+const express = require("express");
 
 const app = express();
 
@@ -22,4 +22,4 @@ app.put("/", express.json(), (req, res) => {
   res.status(200).json({product: req.body})
 })
 
-export default app;
+module.exports = app;

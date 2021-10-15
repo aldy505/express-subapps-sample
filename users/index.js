@@ -1,9 +1,8 @@
-import express from "express";
-import dotenv from "dotenv";
-import { resolve, dirname } from "path";
-import { fileURLToPath } from "url"
+const express = require("express");
+const dotenv = require("dotenv");
+const { resolve, dirname } = require("path");
 
-dotenv.config({ path: resolve(dirname(fileURLToPath(import.meta.url)), ".env") });
+dotenv.config({ path: resolve(dirname(__filename), ".env") });
 
 const app = express();
 
@@ -32,4 +31,4 @@ app.delete("/name/:name", (req, res) => {
   res.status(200).json({msg: "That name was deleted"});
 })
 
-export default app;
+module.exports = app;
