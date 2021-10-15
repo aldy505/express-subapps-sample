@@ -1,13 +1,21 @@
 {
-  "name": "users",
+  "name": "middleware",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldy505/express-subapps-sample.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aldy505/express-subapps-sample/issues"
+  },
+  "homepage": "https://github.com/aldy505/express-subapps-sample#readme",
   "dependencies": {
     "polka": "^1.0.0-next.22"
   },

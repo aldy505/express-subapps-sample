@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "polka": "^1.0.0-next.22"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.0",
+    "typescript": "^4.4.4"
   }
 }
